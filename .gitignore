@@ -5,6 +5,7 @@
 demo/node_modules
 demo/.pnp
 demo/.pnp.js
+demo/package-lock.json
 
 # testing
 demo/coverage

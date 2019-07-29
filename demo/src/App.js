@@ -5,12 +5,20 @@ import Highlighting from './component-demos/Highlighting';
 import NavCube from './component-demos/NavCube';
 import Screenshot from './component-demos/Screenshot';
 import ConditionalRender from './component-demos/ConditionalRender';
+import XKT from './component-demos/XKT';
 
 const App = () => (
   <div className="container my-5">
     <h1 className="text-center text-light my-5">
       Xeokit-SDK React integration demo
     </h1>
+    <div className="card bg-light my-5">
+      <div className="card-header">Feature</div>
+      <div className="card-body">
+        <h4 className="card-title mb-5">XKT file support</h4>
+        <XKT />
+      </div>
+    </div>
     <div className="card bg-light my-5">
       <div className="card-header">Feature</div>
       <div className="card-body">
@@ -43,7 +51,7 @@ const App = () => (
       <div className="card-header">Feature</div>
       <div className="card-body">
         <h4 className="card-title mb-5">Take screenshot of scene</h4>
-        <Screenshot />
+        {/* <Screenshot /> */}
       </div>
     </div>
     <div className="card bg-light my-5">
