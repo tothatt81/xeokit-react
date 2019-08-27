@@ -66,6 +66,10 @@ const useViewer = (
       );
     }
     if (perfModelsRef.current && modelsHaveLoaded) {
+      viewerRef.current.scene.setObjectsSelected(
+        viewerRef.current.scene.selectedObjectIds,
+        false,
+      );
       bcfViewpointPluginRef.current.setViewpoint(viewpoint);
     }
   };
