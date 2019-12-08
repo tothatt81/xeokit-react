@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { SectionPlanesPlugin } from 'xeokit-sdk/src/plugins/SectionPlanesPlugin/SectionPlanesPlugin';
+import { SectionPlanesPlugin } from '@xeokit/xeokit-sdk/src/plugins/SectionPlanesPlugin/SectionPlanesPlugin';
 
 // Section planes states
 const VISIBLE = 'VISIBLE';
@@ -36,7 +36,8 @@ export const useSectionPlanes = (viewer, plane = defaultPlane) => {
 
   useEffect(() => {
     if (viewer) {
-      const sectionPlane = viewer.scene.sectionPlanes[plane.id];
+      const sectionPlane =
+        viewer.scene.sectionPlanes && viewer.scene.sectionPlanes[plane.id];
 
       if (state === DISABLED) {
         if (sectionPlane) {
